@@ -1,7 +1,6 @@
 body{
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
-
 }
 
 .sidebar{
@@ -14,20 +13,28 @@ body{
     background-color: green;
 }
 
+.header-top{
+    border: solid 1px black;
+}
+
+.header-bottom{
+    border: solid 1px black;
+}
+
 .main-content{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
     grid-area: 2 / 2 / -1 / -1 ;
     background-color: blue;
+    
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 .main-left{
     grid-column: 1 / 2;
-    border: solid 1px; black;
+    border: solid 1px black;
 }
 
 .main-right{
-    grid-column: 2 / 3;
-    border: solid 1px; black;
-
+    grid-column: 2 / -1;
+    border: solid 1px black;
 }
