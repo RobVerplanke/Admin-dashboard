@@ -1,4 +1,5 @@
 body{
+    margin: 0;
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
 }
@@ -16,7 +17,7 @@ input{
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 8
 }
 
 .sidebar{
@@ -31,18 +32,18 @@ input{
 
 .nav-sub{
     margin-top: 50px;
-
 }
 
 .header{
-    grid-area: 1 / 2 / 1 / 3;  
+    grid-area: 1 / 2 / 1 / 2;  
     background-color: green;
 }
 
 .header-top{
     border: solid 1px black;
     display: grid;
-    grid-template-columns: 6fr 1fr 1fr 1fr;
+    grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+    align-items:center;
 }
 
 .notification{
@@ -60,6 +61,22 @@ input{
 
 .header-bottom{
     border: solid 1px black;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    align-items:center;
+
+}
+
+.profile-img-big{
+    border: solid 1px black;
+}
+
+.username{
+    border: solid 1px black;
+}
+
+.buttons{
+    border:solid 1px black;
 }
 
 .main-content{
