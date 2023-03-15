@@ -43,8 +43,15 @@ input{
     border: solid 1px black;
 }
 
-.nav-sub{
+.nav-sub {
     margin-top: 50px;
+}
+
+.nav-sub li{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    
     border: solid 1px black;
 }
 
