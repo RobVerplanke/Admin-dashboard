@@ -43,6 +43,10 @@ input{
     border: solid 1px black;
 }
 
+.material-symbols-outlined{
+    color: white;
+}
+
 .nav-sub {
     margin-top: 50px;
 }
