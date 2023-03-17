@@ -3,3 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    display: grid;
+    grid-template-columns: 260px 100%;
+    grid-template-rows: 140px 100%;
+}
+
+/* ===================
+    Custom Properties */
+
+:root{
+    --header-background-color: red;
+    --sidebar-background-color: blue;
+    --main-left-background-color: green;
+    --main-right-background-color: yellow;
+
+}
+
+
+/* ===================
+        Header
+   =================== */
+
+header{
+    grid-area: 1 / 1 / 1 / 3;
+    background-color: var(--header-background-color);
+}
+
+
+/* ===================
+        Sidebar
+   =================== */
+
+aside{
+    background-color: var(--sidebar-background-color);
+}
+
+
+/* ===================
+        Main
+   =================== */
+
+main{
+    background-color: var(--main-background-color);
+    display: grid;
+}
+
+/* ===================
+        Main Left   */
+
+.main-left{
+    background-color: var(--main-left-background-color);
+
+}
+
+/* ===================
+        Main Right  */
+
+.main-right{
+    background-color: var(--main-right-background-color);
+
+}
