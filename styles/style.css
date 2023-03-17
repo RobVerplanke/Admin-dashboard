@@ -5,9 +5,7 @@
 }
 
 body{
-    display: grid;
-    grid-template-columns: 260px 100%;
-    grid-template-rows: 140px 100%;
+
 }
 
 /* ===================
@@ -15,20 +13,46 @@ body{
 
 :root{
     --header-background-color: red;
+    --header-height: 140px;
+    
     --sidebar-background-color: blue;
+    --sidebar-width: 260px;
+    
     --main-left-background-color: green;
+    --main-left-width: 3fr;
     --main-right-background-color: yellow;
+    --main-right-width: 1fr;
+}
 
+.container{
+    display: grid;
+    grid-template-columns: var(--sidebar-width) auto;
+    grid-template-rows: var(--header-height) auto;
 }
 
 
 /* ===================
-        Header
+          Header
    =================== */
 
 header{
-    grid-area: 1 / 1 / 1 / 3;
     background-color: var(--header-background-color);
+    
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+}
+
+.header-top{
+    grid-area: 1 / 1 / 1 / 3;
+
+    border: solid 1px black;
+}
+
+.header-bottom{
+    grid-area: 2 / 1 / 2 / 3;
+
+    border: solid 1px black;
+
 }
 
 
@@ -38,16 +62,33 @@ header{
 
 aside{
     background-color: var(--sidebar-background-color);
+
+    grid-area: 1 / 1 / 3 / 1;
 }
 
+.sidebar-logo-container{
+    border: solid 1px black;
 
+}
+
+.sidebar-nav-top{
+    border: solid 1px black;
+
+}
+
+.sidebar-nav-bottom{
+    border: solid 1px black;
+
+}
 /* ===================
-        Main
+          Main
    =================== */
 
 main{
     background-color: var(--main-background-color);
+    
     display: grid;
+    grid-template-columns: var(--main-left-width) var(--main-right-width);
 }
 
 /* ===================
@@ -55,6 +96,7 @@ main{
 
 .main-left{
     background-color: var(--main-left-background-color);
+    border: solid 1px black;
 
 }
 
@@ -63,5 +105,6 @@ main{
 
 .main-right{
     background-color: var(--main-right-background-color);
+    border: solid 1px black;
 
 }
