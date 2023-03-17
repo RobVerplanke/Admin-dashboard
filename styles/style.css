@@ -2,6 +2,33 @@
 
 
 /* ===================
+    Custom Properties 
+   =================== */
+
+:root{
+    --header-background-color: red;
+    --header-height: 160px;
+    --header-text-color: #333;
+    --header-navtext-color: #eee;
+    
+    --sidebar-background-color: blue;
+    --sidebar-text-color:#eee;
+    --sidebar-width: 260px;
+    
+    --logo-icon-dimension: 48px;        /* Logo-icon's width AND height */
+    --avatar-small-dimension: 42px;     /* Avatar's width AND height */
+    --avatar-large-dimension: 64px;     /* Avatar's width AND height */
+    
+    --main-left-background-color: green;
+    --main-left-width: 3fr;
+    --main-right-background-color: yellow;
+    --main-right-width: 1fr;
+
+}
+
+
+
+/* ===================
       Global Styles 
    =================== */
 
@@ -16,21 +43,36 @@ body{
 }
 
 header h3{
-    color: #333;
+    color: var(--header-text-color);
 }
 
 input{
-    background-color: #ddd;
+    background-color: #eee;
     width: 460px;
-    height: 32px;
+    height: 28px;
     margin-left: 12px;
     border: 0;
     border-radius: 12px;
 }
 
+button{
+    background-color: blue;
+    color: var(--header-navtext-color);
+    font-size: .8em;
+    font-weight: 700;
+    width: 86px;
+    height: 36px;
+    border: 0;
+    border-radius: 16px;
+}
+
 aside h1, h3{
-    color: white;
     padding-left: 20px;
+    color: var(--sidebar-text-color);
+}
+
+.user-name h3{
+    padding: 0;
 }
 
 aside h1{
@@ -54,27 +96,10 @@ aside li{
     'opsz' 48
 }
 
-
-/* ===================
-    Custom Properties 
-   =================== */
-
-:root{
-    --header-background-color: red;
-    --header-height: 120px;
-    
-    --sidebar-background-color: blue;
-    --sidebar-width: 260px;
-    
-    --logo-icon-dimension: 48px;    /* Logo-icon's width AND height */
-    --avatar-dimension: 50px;       /* Avatar's width AND height */
-    
-    --main-left-background-color: green;
-    --main-left-width: 3fr;
-    --main-right-background-color: yellow;
-    --main-right-width: 1fr;
-
+article{
+    border: solid 1px black;
 }
+
 
 
 /* ===================
@@ -106,7 +131,7 @@ header{
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 16px;
+    padding: 10px;
 }
 
 .header-top-search{
@@ -125,14 +150,19 @@ header{
 
 .header-top-options{
     display: grid;
-    grid-template-columns: 60px 60px 180px;
+    grid-template-columns: 60px 60px 170px;
     justify-content: center;
     align-items: center;
 }
 
-.user-avatar img{
-    width: var(--avatar-dimension);
-    height: var(--avatar-dimension);
+.user-avatar-small img{
+    width: var(--avatar-small-dimension);
+    height: var(--avatar-small-dimension);
+}
+
+.user-avatar-large img{
+    width: var(--avatar-large-dimension);
+    height: var(--avatar-large-dimension);
 }
 
     /* Header Bottom    */
@@ -140,8 +170,32 @@ header{
 .header-bottom{
     grid-area: 2 / 1 / 2 / 3;
 
+    display: grid;
+    grid-template-columns: 64px 2fr 1fr;
+    justify-content:center;
+    align-items: center;
+
+    margin: 10px 10px 10px 30px;
+
 }
 
+.user-avatar-large{
+
+}
+
+.user-info{
+    margin-left: 20px;
+
+}
+
+.header-bottom-nav{
+    width: 360px;
+    margin-right: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+}
 
 /* ===================
         Sidebar     */
