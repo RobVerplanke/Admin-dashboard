@@ -18,7 +18,7 @@
     
     
     --main-left-background-color: #ddd;
-    --main-left-width: 3fr;
+    --main-left-width: 2fr;
     --main-right-background-color: #ddd;
     --main-right-width: 1fr;
 
@@ -92,8 +92,9 @@ aside h1, h3{
 }
 
 .project-title h3{
+    cursor: pointer;
     padding: 0;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0px 0;
     color: var(--header-text-color)
 }
 
@@ -122,7 +123,7 @@ aside li{
 article{
     background-color: var(--article-background-color);
 
-    width: 340px;
+    /* width: 340px; */
     height: 200px;
     padding: 20px;
     border-radius: 10px;
@@ -305,7 +306,7 @@ main{
 
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
     grid-auto-rows: 1fr;
     gap: 20px;
 
@@ -335,22 +336,30 @@ main{
     background-color: var(--main-right-background-color);
 
     display: grid;
-    grid-template-rows: 40px 1fr 40px 1fr;
-
+    grid-template-columns: 260px;
+    grid-template-rows: 40px max(300px, 1fr) 40px 1fr;
+    align-content: start;
 }
 
 .announcements{
     background-color: var(--article-background-color);
 
+    max-height: 300px;
     padding: 30px;
-    margin: 25px 20px 20px 0;
+    margin: 20px 20px 20px 0;
     border-radius: 10px;
     box-shadow: 3px 3px 4px #cacaca;
 }
 
+
+
 .announcement:not(:nth-child(3)){
     border-bottom: solid 1px #ddd;
     margin-bottom: 10px;
+}
+
+.announcement{
+    cursor: pointer;
 }
 
 .announcement-text{
@@ -366,13 +375,17 @@ main{
 .trending{
     background-color: var(--article-background-color);
 
+    max-width: 240px;
+    max-height: 300px;
     padding: 20px;
-    margin: 25px 20px 20px 0;
+    margin: 20px 20px 20px 0;
     border-radius: 10px;
     box-shadow: 3px 3px 4px #cacaca;
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 30px 4fr;
+    align-items: center;
+
 }
 
 .user-info-welcome{
