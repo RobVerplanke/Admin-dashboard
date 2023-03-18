@@ -66,6 +66,7 @@ input{
 button{
     background-color: var(--header-button-color);
     color: var(--header-navtext-color);
+    cursor: pointer;
     font-size: .8em;
     font-weight: 700;
     width: 86px;
@@ -102,6 +103,7 @@ aside h1{
 
 aside li{
     padding: 10px;
+    cursor: pointer;
 
     display: grid;
     grid-template-columns: 20px auto;
@@ -193,6 +195,7 @@ header{
 
 .message-alert span{
     color: #333;
+    cursor: pointer;
 }
 
 .user-avatar-small img{
@@ -275,7 +278,9 @@ aside{
 }
 
 .sidebar-nav-top{
-    margin: 50px 0 50px 20px;
+    margin: 50px 20px 20px 20px;
+    padding: 0 0 20px 0;
+    border-bottom: solid 1px #ddd;
     
 }
 
@@ -318,6 +323,7 @@ main{
 
 .project-options span{
     margin-left: 20px;
+    cursor: pointer;
     color: #333;
 }
 
@@ -325,7 +331,6 @@ main{
     display: flex;
     justify-content: end;
     align-items: end;
-
 }
 
     /*  Main Right  */
@@ -376,4 +381,11 @@ main{
 
 .user-info-welcome{
     font-weight: 700;
+
+}
+
+.trending-user-info{
+    font-weight: 700;
+
+    cursor: pointer;
 }
