@@ -75,6 +75,19 @@ button{
     border-radius: 16px;
 }
 
+button:hover{
+    /* background-color: #666; */
+    color: var(--header-navtext-color);
+    cursor: pointer;
+    font-size: .8em;
+    font-weight: 700;
+    width: 86px;
+    height: 36px;
+    border: 0;
+    border-radius: 16px;
+    border: solid 2px #e75c0c;
+}
+
 aside h1, h3{
     padding-left: 20px;
     color: var(--sidebar-text-color);
@@ -109,6 +122,18 @@ aside li{
     display: grid;
     grid-template-columns: 20px auto;
 }
+
+aside li:hover{
+    padding: 10px;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-columns: 20px auto;
+
+    background-color: #444;
+    border-radius: 10px;
+}
+
 
 .material-symbols-outlined {
     color: white;
@@ -152,6 +177,8 @@ article{
 
 header{
     background-color: var(--header-background-color);
+    box-shadow: 3px 3px 4px #cacaca;
+    z-index: 1;
     
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
@@ -282,7 +309,8 @@ aside{
 }
 
 .sidebar-nav-bottom{
-    margin: 0 0 0 20px;
+    margin: 0 20px 0 20px;
+    
 
 }
 
@@ -339,6 +367,7 @@ main{
     grid-template-columns: 260px;
     grid-template-rows: 40px max(300px, 1fr) 40px 1fr;
     align-content: start;
+    justify-content: center;
 }
 
 .announcements{
@@ -368,6 +397,7 @@ main{
 }
 
 .announcement-title{
+    color: #333;
     font-size: .8em;
     font-weight: 700;
 }
@@ -389,11 +419,13 @@ main{
 }
 
 .user-info-welcome{
+    color: #333;
     font-weight: 700;
 
 }
 
 .trending-user-info{
+    color: #333;
     font-weight: 700;
 
     cursor: pointer;
