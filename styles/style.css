@@ -13,7 +13,7 @@
     --header-button-color:#333;
     
     --sidebar-background-color: #333;
-    --sidebar-text-color:#eee;
+    --sidebar-text-color:#ddd;
     --sidebar-width: 260px;
     
     
@@ -333,15 +333,16 @@ main{
 .main-right{
     background-color: var(--main-right-background-color);
 
+    display: grid;
+    grid-template-rows: 40px 1fr 40px 1fr;
+
 }
 
 .announcements{
     background-color: var(--article-background-color);
 
-    width: 240px;
-    height: 280px;
     padding: 30px;
-    margin-right: 20px;
+    margin: 25px 20px 20px 0;
     border-radius: 10px;
     box-shadow: 3px 3px 4px #cacaca;
 }
@@ -358,5 +359,21 @@ main{
 
 .announcement-title{
     font-size: .8em;
+    font-weight: 700;
+}
+
+.trending{
+    background-color: var(--article-background-color);
+
+    padding: 20px;
+    margin: 25px 20px 20px 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px #cacaca;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.user-info-welcome{
     font-weight: 700;
 }
