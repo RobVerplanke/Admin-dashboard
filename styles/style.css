@@ -6,24 +6,27 @@
    =================== */
 
 :root{
-    --header-background-color: red;
+    --header-background-color: #eee;
     --header-height: 160px;
     --header-text-color: #333;
     --header-navtext-color: #eee;
+    --header-button-color:#333;
     
-    --sidebar-background-color: blue;
+    --sidebar-background-color: #333;
     --sidebar-text-color:#eee;
     --sidebar-width: 260px;
     
+    
+    --main-left-background-color: #ddd;
+    --main-left-width: 3fr;
+    --main-right-background-color: #ddd;
+    --main-right-width: 1fr;
+
+    --article-background-color: #eee;
+
     --logo-icon-dimension: 48px;        /* Logo-icon's width AND height */
     --avatar-small-dimension: 42px;     /* Avatar's width AND height */
     --avatar-large-dimension: 64px;     /* Avatar's width AND height */
-    
-    --main-left-background-color: green;
-    --main-left-width: 3fr;
-    --main-right-background-color: yellow;
-    --main-right-width: 1fr;
-
 }
 
 
@@ -42,21 +45,26 @@ body{
     font-family: 'Source Code Pro', monospace;
 }
 
+p{
+    font-size: .8em;
+}
+
 header h3{
     color: var(--header-text-color);
 }
 
 input{
-    background-color: #eee;
+    background-color: #ddd;
     width: 460px;
     height: 28px;
+    padding-left: 10px;
     margin-left: 12px;
     border: 0;
     border-radius: 12px;
 }
 
 button{
-    background-color: blue;
+    background-color: var(--header-button-color);
     color: var(--header-navtext-color);
     font-size: .8em;
     font-weight: 700;
@@ -73,6 +81,17 @@ aside h1, h3{
 
 .user-name h3{
     padding: 0;
+}
+
+.projects-title h3{
+    padding: 0;
+    font-size: 1.2em;
+    color: var(--header-text-color)
+}
+
+.project-title h3{
+    padding: 0;
+    color: var(--header-text-color)
 }
 
 aside h1{
@@ -98,6 +117,14 @@ aside li{
 
 article{
     border: solid 1px black;
+    background-color: var(--article-background-color);
+
+    width: 340px;
+    height: 200px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows:1fr 1fr 3fr;
 }
 
 
@@ -260,6 +287,25 @@ main{
 .main-left{
     background-color: var(--main-left-background-color);
 
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.projects-title{
+    padding: 20px 0 0 20px;
+}
+
+.project-options{
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
     /*  Main Right  */
