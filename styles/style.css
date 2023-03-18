@@ -222,10 +222,6 @@ header{
 
 }
 
-.user-avatar-large{
-
-}
-
 .user-info{
     margin-left: 20px;
 
@@ -309,8 +305,8 @@ main{
 
 .projects{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 20px;
 
     padding: 20px;
