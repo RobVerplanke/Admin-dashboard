@@ -229,7 +229,6 @@ header{
 
 .message-alert span:hover{
     color: var(--hover-color-accent);
-    cursor: pointer;
 }
 
 .user-avatar-small img{
@@ -240,6 +239,11 @@ header{
 .user-avatar-large img{
     width: var(--avatar-large-dimension);
     height: var(--avatar-large-dimension);
+}
+
+.user-info-welcome{
+    color: var(--header-text-color);
+    font-weight: 700;
 }
 
     /* Header Bottom    */
@@ -425,14 +429,14 @@ main{
     align-items: center;
 }
 
-.user-info-welcome{
+.trending-user-info{
     color: var(--header-text-color);
     font-weight: 700;
 }
 
-.trending-user-info{
-    color: var(--header-text-color);
-    font-weight: 700;
-
+.trending-name,
+.user-avatar-small,
+.trending-user-info
+{
     cursor: pointer;
 }
